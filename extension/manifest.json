@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Ada",
+    "description": "Ask questions based on page content",
+    "version": "1.0",
+    "action": {
+        "default_popup": "index.html"
+    },
+    "icons": {
+        "16": "images/icon-16.png",
+        "32": "images/icon-32.png",
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+      },
+      "permissions": [
+        "activeTab",
+        "tabs",
+        "scripting"
+      ],
+      "content_scripts": [
+        {
+          "js": ["scripts/content.js"],
+          "matches": [
+            "https://*/*"
+          ]
+        }
+      ]
+}
